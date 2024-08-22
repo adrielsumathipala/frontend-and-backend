@@ -51,7 +51,7 @@ class CustomerApp extends Component {
         ) : (
           <div>
             <p>
-              Hi <b>{this.state.name}</b>. It is now <b>{this.state.timestamp}</b> and here is our customer list.
+              Hi <b>{this.state.name}</b>. It is now <b>{this.state.timestamp}</b> and here is our list of customers.
             </p>
             {!this.state.customer ? (
               <div>
@@ -60,8 +60,9 @@ class CustomerApp extends Component {
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th># of Employees</th>
+                      <th>Number of Employees</th>
                       <th>Size</th>
+                      <th>Date Founded</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -74,6 +75,7 @@ class CustomerApp extends Component {
                         </td>
                         <td>{customer.employees}</td>
                         <td>{customer.size}</td>
+                        <td>{customer.date_founded}</td>
                       </tr>
                     ))}
                   </tbody>
